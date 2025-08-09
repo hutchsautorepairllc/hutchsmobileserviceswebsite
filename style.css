@@ -1,0 +1,113 @@
+```css
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.header {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero {
+    background-color: #f5deb3; /* Gold */
+    text-align: center;
+    padding: 10rem 0;
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+.services {
+    background-color: #8b4513; /* Saddle Brown (dark brown) */
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.service-item {
+    display: inline-block;
+    text-align: left;
+    margin: 0 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.ask-a-mechanic {
+    background-color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.ask-a-mechanic h2 {
+    color: #8b4513; /* Saddle Brown (dark brown) */
+}
+
+.ask-a-mechanic form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ask-a-mechanic input, .ask-a-mechanic textarea {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.ask-a-mechanic button {
+    padding: 1rem;
+    background-color: #8b4513; /* Saddle Brown (dark brown) */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #f5deb3; /* Gold */
+    text-align: center;
+    padding: 2rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer p {
+    color: white;
+}
