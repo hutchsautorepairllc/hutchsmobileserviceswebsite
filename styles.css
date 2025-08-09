@@ -1,9 +1,11 @@
+```css
 /* Base Styling */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #222;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .bubble-button {
@@ -11,13 +13,13 @@ body {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
-    background-color: #007BFF;
+    background-color: #800080; /* Purple */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .bubble-button::after {
@@ -42,17 +44,18 @@ body {
 }
 
 .bubble-button.clicked {
-    background-color: #28a745;
+    background-color: #ff6347; /* Dark Orange (yellow-ish) */
 }
 
 .header {
-    background-color: #1c1c1c;
+    background-color: #000;
     color: white;
     padding: 2rem 0;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    animation: fadeInDown 1s ease-in-out forwards;
 }
 
 .navbar {
@@ -78,7 +81,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #007BFF;
+    color: #800080; /* Purple */
 }
 
 .hero {
@@ -89,12 +92,14 @@ body {
     background-size: cover;
     background-position: center;
     color: black;
+    animation: fadeInUp 1s ease-in-out forwards;
 }
 
 .services {
-    background-color: #8b4513; /* Saddle Brown (dark brown) */
+    background-color: #222;
     text-align: center;
     padding: 2rem 0;
+    animation: slideInLeft 1s ease-in-out forwards;
 }
 
 .service-item {
@@ -118,10 +123,11 @@ body {
     background-color: #fff;
     padding: 4rem 0;
     text-align: center;
+    animation: slideInRight 1s ease-in-out forwards;
 }
 
 .ask-a-mechanic h2 {
-    color: #8b4513; /* Saddle Brown (dark brown) */
+    color: #800080; /* Purple */
 }
 
 .ask-a-mechanic form {
@@ -140,46 +146,52 @@ body {
 }
 
 .ask-a-mechanic input:focus, .ask-a-mechanic textarea:focus {
-    border-color: #8b4513; /* Saddle Brown (dark brown) */
+    border-color: #800080; /* Purple */
 }
 
 .ask-a-mechanic button {
     padding: 1rem;
-    background-color: #8b4513; /* Saddle Brown (dark brown) */
+    background-color: #800080; /* Purple */
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .ask-a-mechanic button:hover {
-    background-color: #654321; /* Darker Saddle Brown */
+    background-color: #ff6347; /* Dark Orange (yellow-ish) */
+    transform: scale(1.05);
 }
 
 .footer {
-    background-color: #f5deb3; /* Gold */
+    background-color: #000;
     text-align: center;
     padding: 2rem 0;
     position: fixed;
     width: 100%;
     bottom: 0;
     z-index: 999;
+    animation: fadeInUp 1s ease-in-out forwards;
 }
 
-.footer p {
-    color: white;
+/* Keyframes */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-    .nav-links {
-        width: 100%;
-        justify-content: space-around;
-    }
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
 }
